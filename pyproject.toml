@@ -44,6 +44,7 @@ version-file = "src/az_scout_strategy/_version.py"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+exclude = ["src/az_scout_strategy/_version.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "W", "UP", "B", "SIM"]
@@ -51,6 +52,10 @@ select = ["E", "F", "I", "W", "UP", "B", "SIM"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
+
+[[tool.mypy.overrides]]
+module = "az_scout.*"
+implicit_reexport = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -34,18 +34,14 @@ def capacity_strategy(
         list[str] | None, Field(description="Explicit list of candidate regions.")
     ] = None,
     deny_regions: Annotated[list[str] | None, Field(description="Regions to exclude.")] = None,
-    require_zonal: Annotated[
-        bool, Field(description="Require zone-redundant deployment.")
-    ] = False,
+    require_zonal: Annotated[bool, Field(description="Require zone-redundant deployment.")] = False,
     max_inter_region_rtt_ms: Annotated[
         int | None, Field(description="Maximum acceptable RTT between regions.")
     ] = None,
     statefulness: Annotated[
         str, Field(description="'stateless', 'soft-state', or 'stateful'.")
     ] = "stateless",
-    cross_region_traffic: Annotated[
-        str, Field(description="'low', 'medium', or 'heavy'.")
-    ] = "low",
+    cross_region_traffic: Annotated[str, Field(description="'low', 'medium', or 'heavy'.")] = "low",
     latency_sensitivity: Annotated[
         str, Field(description="'low', 'medium', or 'high'.")
     ] = "medium",
@@ -66,9 +62,7 @@ def capacity_strategy(
     ] = None,
     currency_code: Annotated[str, Field(description="'USD' or 'EUR'.")] = "USD",
     prefer_spot: Annotated[bool, Field(description="Prefer Spot VMs.")] = False,
-    max_hourly_budget: Annotated[
-        float | None, Field(description="Maximum hourly budget.")
-    ] = None,
+    max_hourly_budget: Annotated[float | None, Field(description="Maximum hourly budget.")] = None,
 ) -> str:
     """Compute a deterministic Azure deployment strategy based on capacity signals and latency.
 

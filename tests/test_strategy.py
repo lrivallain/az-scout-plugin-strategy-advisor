@@ -15,7 +15,6 @@ from az_scout_strategy.engine import (
 )
 from az_scout_strategy.models import WorkloadProfileRequest
 
-
 # ---------------------------------------------------------------------------
 # Fixtures — SKU dicts matching azure_api.get_skus output
 # ---------------------------------------------------------------------------
