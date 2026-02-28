@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "az-scout-plugin-strategy-advisor"
+dynamic = ["version"]
+description = "Strategy Advisor plugin for az-scout — capacity deployment strategy recommendations"
+requires-python = ">=3.11"
+dependencies = [
+    "az-scout",
+    "fastapi",
+]
+
+[project.urls]
+Homepage = "https://github.com/lrivallain/az-scout-plugin-strategy-advisor"
+Repository = "https://github.com/lrivallain/az-scout-plugin-strategy-advisor"
+Issues = "https://github.com/lrivallain/az-scout-plugin-strategy-advisor/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0",
+    "pytest-cov>=6.0",
+    "ruff>=0.11",
+    "mypy>=1.15",
+    "httpx>=0.28",
+]
+
+[project.entry-points."az_scout.plugins"]
+strategy = "az_scout_strategy:plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/az_scout_strategy"]
+
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.0.0-dev"
+raw-options.version_scheme = "calver-by-date"
+raw-options.local_scheme = "no-local-version"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/az_scout_strategy/_version.py"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
