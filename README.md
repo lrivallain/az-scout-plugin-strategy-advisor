@@ -67,3 +67,11 @@ Uses CalVer (`YYYY.MM.MICRO`) via hatch-vcs. Tag and push to release:
 git tag v2026.2.0
 git push origin v2026.2.0
 ```
+
+## License
+
+[MIT](LICENSE.txt)
+
+## Disclaimer
+
+> **This tool is not affiliated with Microsoft.** All capacity, pricing, and latency information are indicative and not a guarantee of deployment success. Spot placement scores are probabilistic. Quota values and pricing are dynamic and may change between planning and actual deployment. Latency values are based on [Microsoft published statistics](https://learn.microsoft.com/en-us/azure/networking/azure-network-latency) and must be validated with in-tenant measurements.
