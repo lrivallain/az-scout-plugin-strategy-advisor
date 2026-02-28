@@ -6,6 +6,7 @@ build-backend = "hatchling.build"
 name = "az-scout-plugin-strategy-advisor"
 dynamic = ["version"]
 description = "Strategy Advisor plugin for az-scout — capacity deployment strategy recommendations"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "az-scout",
