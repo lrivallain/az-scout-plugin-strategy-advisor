@@ -2,7 +2,7 @@
 
 ## Project overview
 
-This is an **az-scout plugin** — a Python package that extends [az-scout](https://github.com/lrivallain/az-scout) with the **Strategy Advisor** feature. It evaluates candidate (region, SKU) combinations against zones, quotas, restrictions, spot scores, pricing, confidence, and inter-region latency to recommend a multi-region deployment strategy.
+This is an **az-scout plugin** — a Python package that extends [az-scout](https://github.com/az-scout/az-scout) with the **Strategy Advisor** feature. It evaluates candidate (region, SKU) combinations against zones, quotas, restrictions, spot scores, pricing, confidence, and inter-region latency to recommend a multi-region deployment strategy.
 
 ## Tech stack
 
