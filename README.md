@@ -2,7 +2,7 @@
 
 > **⚠️ Work in Progress** — This plugin is under active development. APIs, models, and behaviors may change without notice. It is not recommended for production use at this time.
 
-Strategy Advisor plugin for [az-scout](https://github.com/lrivallain/az-scout) — capacity deployment strategy recommendations.
+Strategy Advisor plugin for [az-scout](https://github.com/az-scout/az-scout) — capacity deployment strategy recommendations.
 
 ## Features
 
