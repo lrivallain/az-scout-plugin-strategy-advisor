@@ -2,7 +2,7 @@
 
 > **⚠️ Work in Progress** — This plugin is under active development. APIs, models, and behaviors may change without notice. It is not recommended for production use at this time.
 
-Strategy Advisor plugin for [az-scout](https://github.com/az-scout/az-scout) — capacity deployment strategy recommendations.
+[az-scout](https://az-scout.com) plugin for capacity deployment strategy recommendations.
 
 ## Features
 
@@ -18,11 +18,18 @@ The engine recommends one of: `single_region`, `active_active`, `active_passive`
 ## Setup
 
 ```bash
-# Install alongside az-scout
-uv pip install -e .
+uv pip install az-scout-plugin-strategy-advisor
+az-scout  # plugin is auto-discovered
+```
 
-# The plugin is auto-discovered at startup
-az-scout
+For development:
+
+```bash
+git clone https://github.com/az-scout/az-scout-plugin-strategy-advisor
+cd az-scout-plugin-strategy-advisor
+uv sync --group dev
+uv pip install -e .
+az-scout  # plugin is auto-discovered
 ```
 
 ## Structure
@@ -59,14 +66,10 @@ uv run mypy src/
 uv run pytest
 ```
 
-## Versioning
+## Copilot support
 
-Uses CalVer (`YYYY.MM.MICRO`) via hatch-vcs. Tag and push to release:
-
-```bash
-git tag v2026.2.0
-git push origin v2026.2.0
-```
+The `.github/copilot-instructions.md` file provides context to GitHub Copilot about
+the plugin structure, conventions, and az-scout plugin API.
 
 ## License
 
@@ -74,4 +77,4 @@ git push origin v2026.2.0
 
 ## Disclaimer
 
-> **This tool is not affiliated with Microsoft.** All capacity, pricing, and latency information are indicative and not a guarantee of deployment success. Spot placement scores are probabilistic. Quota values and pricing are dynamic and may change between planning and actual deployment. Latency values are based on [Microsoft published statistics](https://learn.microsoft.com/en-us/azure/networking/azure-network-latency) and must be validated with in-tenant measurements.
+> **This tool is not affiliated with Microsoft.** All capacity, pricing, and availability information is indicative and not a guarantee of deployment success. Values are dynamic and may change between planning and actual deployment. Always validate in official Microsoft sources and in your target tenant/subscription.
